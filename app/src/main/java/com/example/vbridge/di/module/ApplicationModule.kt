@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
+import com.example.vbridge.BuildConfig
 import com.example.vbridge.VBridgeApplication
 import com.example.vbridge.data.local.db.DatabaseService
 import com.example.vbridge.data.remote.NetworkService
@@ -31,8 +32,8 @@ class ApplicationModule (private val application: VBridgeApplication){
     @Singleton
     @Provides
     fun providesNetworkService(): NetworkService = Networking.create(
-        apiKey = "api-key",
-        baseUrl = "base-url",
+        apiKey = BuildConfig.API_KEY,
+        baseUrl = BuildConfig.BASE_URL,
         cacheDir = application.cacheDir,
         cacheSize = 10 * 1024 *1024  // 10 MB
     )

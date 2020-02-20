@@ -12,10 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vbridge.R
 import com.example.vbridge.di.component.FragmentComponent
 import com.example.vbridge.ui.base.BaseFragment
+import javax.inject.Inject
 
 
 class HomeFragment : BaseFragment<HomeViewModel>() {
-    lateinit var linearLayoutManager: LinearLayoutManager
+
+    @Inject lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun injectDependencies(fragmentComponent: FragmentComponent) {
         fragmentComponent.inject(this)

@@ -12,10 +12,12 @@ import com.example.vbridge.di.component.DaggerActivityComponent
 import com.example.vbridge.di.module.ActivityModule
 import com.example.vbridge.ui.splash.SplashViewModel
 import com.example.vbridge.util.display.Toaster
+import javax.inject.Inject
 
 abstract class BaseActivity<VM: BaseViewModel>() : AppCompatActivity() {
 
-    lateinit var viewModel: SplashViewModel
+    @Inject lateinit var viewModel: VM
+
     lateinit var activityComponent: ActivityComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {

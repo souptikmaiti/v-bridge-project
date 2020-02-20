@@ -12,10 +12,12 @@ import com.example.vbridge.di.component.DaggerFragmentComponent
 import com.example.vbridge.di.component.FragmentComponent
 import com.example.vbridge.di.module.FragmentModule
 import com.example.vbridge.util.display.Toaster
+import javax.inject.Inject
 
 abstract class BaseFragment<VM: BaseViewModel>(): Fragment() {
 
-    lateinit var viewModel: VM
+    @Inject lateinit var viewModel: VM
+
     lateinit var fragmentComponent: FragmentComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
