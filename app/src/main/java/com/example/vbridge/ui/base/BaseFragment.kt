@@ -7,14 +7,19 @@ import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.example.vbridge.VBridgeApplication
+import com.example.vbridge.di.component.DaggerFragmentComponent
+import com.example.vbridge.di.component.FragmentComponent
+import com.example.vbridge.di.module.FragmentModule
 import com.example.vbridge.util.display.Toaster
 
 abstract class BaseFragment<VM: BaseViewModel>(): Fragment() {
 
     lateinit var viewModel: VM
+    lateinit var fragmentComponent: FragmentComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        injectDependencies()
+        injectDependencies(buildFragmentComponent())
         super.onCreate(savedInstanceState)
         setUpObservers()
         viewModel.onCreate()
@@ -30,6 +35,14 @@ abstract class BaseFragment<VM: BaseViewModel>(): Fragment() {
         setUpView(view)
     }
 
+    private fun buildFragmentComponent(): FragmentComponent {
+        fragmentComponent = DaggerFragmentComponent
+            .builder()
+            .applicationComponent((activity?.application as VBridgeApplication).applicationComponent)
+            .fragmentModule(FragmentModule(this))
+            .build()
+        return fragmentComponent
+    }
     protected fun setUpObservers(){
         viewModel.messageString.observe(this, Observer {
             it.data?.run {
@@ -49,7 +62,7 @@ abstract class BaseFragment<VM: BaseViewModel>(): Fragment() {
 
     fun showMessage(@StringRes resId: Int) = showMessage(getString(resId))
 
-    protected abstract fun injectDependencies()
+    protected abstract fun injectDependencies(fragmentComponent: FragmentComponent)
 
     protected abstract fun provideLayoutId():Int
 

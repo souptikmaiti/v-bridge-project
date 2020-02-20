@@ -10,16 +10,15 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.vbridge.R
+import com.example.vbridge.di.component.FragmentComponent
 import com.example.vbridge.ui.base.BaseFragment
 
 
 class HomeFragment : BaseFragment<HomeViewModel>() {
     lateinit var linearLayoutManager: LinearLayoutManager
 
-    override fun injectDependencies() {
-        viewModel = ViewModelProviders.of(
-            this,
-        )
+    override fun injectDependencies(fragmentComponent: FragmentComponent) {
+        fragmentComponent.inject(this)
     }
 
     override fun provideLayoutId(): Int {

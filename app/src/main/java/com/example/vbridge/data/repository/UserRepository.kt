@@ -4,8 +4,9 @@ import com.example.vbridge.data.local.db.DatabaseService
 import com.example.vbridge.data.local.pref.UserPreferences
 import com.example.vbridge.data.model.User
 import com.example.vbridge.data.remote.NetworkService
+import javax.inject.Inject
 
-class UserRepository(
+class UserRepository @Inject constructor(
     private val networkService: NetworkService,
     private val databaseService: DatabaseService,
     private val userPreferences: UserPreferences

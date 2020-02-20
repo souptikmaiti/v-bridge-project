@@ -1,8 +1,9 @@
 package com.example.vbridge.data.local.pref
 
 import android.content.SharedPreferences
+import javax.inject.Inject
 
-class UserPreferences (private val prefs: SharedPreferences) {
+class UserPreferences @Inject constructor(private val prefs: SharedPreferences) {
 
     companion object {
         const val USER_ID = "PREF_USER_ID"
