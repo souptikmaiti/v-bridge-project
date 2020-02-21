@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.08"
+        app:layout_constraintGuide_percent="0.03892944"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9270073" />
+        app:layout_constraintGuide_percent="0.96107054" />
 
     <View
         android:layout_width="match_parent"
@@ -172,11 +172,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_abt"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="28dp"
-        android:background="@android:color/background_dark"
+        android:backgroundTint="@android:color/background_dark"
         android:fontFamily="serif"
         android:text="ABOUT"
         android:textColor="#FFC107"
@@ -189,10 +189,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_profile"
-        android:layout_width="65dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="28dp"
-        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/darker_gray"
         android:fontFamily="serif"
         android:text="PROFILE"
         android:textColor="#FFC107"
@@ -206,10 +206,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_project"
-        android:layout_width="73dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="28dp"
-        android:background="@android:color/background_dark"
+        android:backgroundTint="@android:color/background_dark"
         android:fontFamily="serif"
         android:text="PROJECTS"
         android:textColor="#FFC107"
@@ -223,10 +223,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_bridge"
-        android:layout_width="85dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="28dp"
-        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/darker_gray"
         android:fontFamily="serif"
         android:text="BRIDGE2K17"
         android:textColor="#FFC107"
@@ -239,11 +239,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_headline"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/background_dark"
+        android:backgroundTint="@android:color/background_dark"
         android:fontFamily="serif"
         android:text="HEADLINES"
         android:textColor="#FFC107"
@@ -258,10 +258,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_connect"
-        android:layout_width="70sp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/darker_gray"
         android:fontFamily="serif"
         android:text="CONNECT"
         android:textColor="#FFC107"
@@ -275,11 +275,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_join"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/background_dark"
+        android:backgroundTint="@android:color/background_dark"
         android:fontFamily="serif"
         android:text="JOIN US"
         android:textColor="#FFC107"
