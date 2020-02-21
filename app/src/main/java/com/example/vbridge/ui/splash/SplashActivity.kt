@@ -1,5 +1,6 @@
 package com.example.vbridge.ui.splash
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
@@ -9,6 +10,7 @@ import com.example.vbridge.data.local.pref.UserPreferences
 import com.example.vbridge.data.repository.UserRepository
 import com.example.vbridge.di.component.ActivityComponent
 import com.example.vbridge.ui.base.BaseActivity
+import com.example.vbridge.ui.home.HomeActivity
 import com.example.vbridge.util.ViewModelProviderFactory
 
 class SplashActivity() : BaseActivity<SplashViewModel>() {
@@ -22,6 +24,8 @@ class SplashActivity() : BaseActivity<SplashViewModel>() {
     }
 
     override fun setUpViews(savedInstanceState: Bundle?) {
+        var intent: Intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
     }
 
 }
