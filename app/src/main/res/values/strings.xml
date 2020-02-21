@@ -8,4 +8,13 @@
     </string>
     <string name="server_connection_error">Not able to connect, please retry again</string>
     <string name="network_login_again">Please log in again</string>
+    <string name="bridge2k17_gmail_com">bridge2k17@gmail.com</string>
+    <string name="_91_8981_7376_95_91_8443_9901_21">+91-8981-7376-95/+91-8443-9901-21</string>
+    <string name="about">ABOUT</string>
+    <string name="profile">PROFILE</string>
+    <string name="projects">PROJECTS</string>
+    <string name="bridge2k17">BRIDGE2K17</string>
+    <string name="headlines">HEADLINES</string>
+    <string name="connect">CONNECT</string>
+    <string name="join_us">JOIN US</string>
 </resources>
